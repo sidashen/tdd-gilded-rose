@@ -1,6 +1,6 @@
 package cn.xpbootcamp.gilded_rose;
 
-public class Product {
+public abstract class Product {
   private int Quality;
   private int SellIn;
   private String name;
@@ -45,13 +45,6 @@ public class Product {
     ExpireDate = expireDate;
   }
 
-  public void afterFewDays(int day) {
-    if (SellIn <= ExpireDate) {
-      SellIn += day;
-      Quality -= day * 2;
-    } else {
-      System.out.println("it is out of date");
-    }
-  }
+  public abstract void afterFewDays(int day);
 
 }
