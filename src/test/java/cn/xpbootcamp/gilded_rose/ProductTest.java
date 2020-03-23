@@ -39,5 +39,11 @@ public class ProductTest {
     assertEquals(20, sulfuras.getQuality());
   }
 
+  @Test
+  void when_day_add_then_quality_add_according_to_expired_date() {
+    BackstagePass backstagePass = new BackstagePass(20, 0, "ticket", 20);
+    backstagePass.afterFewDays(20);
+    assertEquals(0, backstagePass.getQuality());
+  }
 
 }
