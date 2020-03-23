@@ -19,7 +19,7 @@ public class NormalProduct extends Product {
   @Override
   public void afterFewDays(int day) {
     for (int i = 0; i < day; i++) {
-      if (this.getSellIn() <= this.getExpireDate() && this.getQuality() - 2 >= 0) {
+      if (this.getSellIn() <= this.getExpireDate() && this.getQuality() - 2 >= 0 && this.getQuality() <= 50) {
         this.setSellIn(this.getSellIn() + 1);
         this.setQuality(this.getQuality() - 2);
       } else {
