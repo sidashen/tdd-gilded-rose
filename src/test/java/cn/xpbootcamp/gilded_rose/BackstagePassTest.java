@@ -34,7 +34,7 @@ public class BackstagePassTest {
   }
 
   @Test
-  @DisplayName("Check quality when less than 10 days but more than 5 days left")
+  @DisplayName("Check quality when less than 5 days but more than 0 days left")
   void when_day_add_then_quality_add_triple() {
     BackstagePass backstagePass = new BackstagePass(20, 0, "ticket", 20);
     backstagePass.afterFewDays(19);
@@ -42,7 +42,7 @@ public class BackstagePassTest {
   }
 
   @Test
-  @DisplayName("Check quality when less than 10 days but more than 5 days left")
+  @DisplayName("Check quality when expired")
   void should_equal_to_zero_when_expired() {
     BackstagePass backstagePass = new BackstagePass(20, 0, "ticket", 20);
     backstagePass.afterFewDays(20);
