@@ -12,7 +12,7 @@ public class NormalProductTest {
   @DisplayName("Check price of products")
   void correct_price() {
     NormalProduct normalProduct = new NormalProduct(20, 0, "apple", 30);
-    normalProduct.afterFewDays(5);
+    normalProduct.afterFewDays(40);
     assumeTrue(normalProduct.getQuality() >= 0 && normalProduct.getQuality() <= 50);
   }
 
