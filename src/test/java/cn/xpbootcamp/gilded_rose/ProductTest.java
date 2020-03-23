@@ -33,9 +33,11 @@ public class ProductTest {
   }
 
   @Test
-  void when_day_add_quality_stay() {
+  void when_day_add_then_quality_stay() {
     Sulfuras sulfuras = new Sulfuras(20, 0, "sul");
     sulfuras.afterFewDays(5);
     assertEquals(20, sulfuras.getQuality());
   }
+
+
 }
