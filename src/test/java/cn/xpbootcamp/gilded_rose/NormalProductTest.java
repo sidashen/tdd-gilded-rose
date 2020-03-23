@@ -9,8 +9,8 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
 public class NormalProductTest {
 
   @Test
-  @DisplayName("Check price of products")
-  void correct_price() {
+  @DisplayName("Check quality of products")
+  void should_return_true_at_any_condition() {
     NormalProduct normalProduct = new NormalProduct(20, 0, "apple", 30);
     normalProduct.afterFewDays(40);
     assumeTrue(normalProduct.getQuality() >= 0 && normalProduct.getQuality() <= 50);
