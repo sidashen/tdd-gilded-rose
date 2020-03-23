@@ -13,9 +13,11 @@ public class ProductTest {
     assertEquals(true, isCorrectPrice());
   }
 
+
+
   public Boolean isCorrectPrice() {
-    if (product.getPrice() >= 0 && product.getPrice() <= 50) {
-      System.out.println(product.getPrice());
+    if (product.getQuality() >= 0 && product.getQuality() <= 50) {
+      System.out.println(product.getQuality());
       return true;
     } else {
       return false;

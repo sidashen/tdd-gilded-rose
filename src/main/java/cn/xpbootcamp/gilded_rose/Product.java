@@ -1,17 +1,13 @@
 package cn.xpbootcamp.gilded_rose;
 
 public class Product {
-  private double price;
+  private int Quality;
 
-//  public Product(double price) {
-//    this.price = price;
-//  }
-
-  public double getPrice() {
-    return price;
+  public int getQuality() {
+    return Quality;
   }
 
-  public void setPrice(double price) {
-    this.price = price;
+  public void setQuality(int quality) {
+    Quality = quality;
   }
 }
