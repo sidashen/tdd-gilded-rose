@@ -8,10 +8,10 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
 public class ProductTest {
 
   @Test
-  void price() {
+  void correct_price() {
     Product product = new Product();
     assumeTrue(product.getQuality() >= 0 && product.getQuality() <= 50);
 //    assertEquals(true, isCorrectPrice());
   }
-
+  
 }
