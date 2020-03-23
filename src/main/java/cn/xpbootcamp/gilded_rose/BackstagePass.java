@@ -20,11 +20,11 @@ public class BackstagePass extends Product {
   public void afterFewDays(int day) {
     this.setSellIn(this.getSellIn() + day);
     for (int i = 1; i <= day; i++) {
-      if ((this.getExpireDate() - i) >= 10) {
+      if ((this.getExpireDate() - i) >= 10 && this.getQuality() <= 50) {
         this.setQuality(this.getQuality() + 1);
-      } else if ((this.getExpireDate() - i) < 10 && (this.getExpireDate() - i) >= 5) {
+      } else if ((this.getExpireDate() - i) < 10 && (this.getExpireDate() - i) >= 5 && this.getQuality() <= 50) {
         this.setQuality(this.getQuality() + 2);
-      } else if ((this.getExpireDate() - i) < 5 && (this.getExpireDate() - i) > 0) {
+      } else if ((this.getExpireDate() - i) < 5 && (this.getExpireDate() - i) > 0 && this.getQuality() <= 50) {
         this.setQuality(this.getQuality() + 3);
       } else {
         this.setQuality(0);
