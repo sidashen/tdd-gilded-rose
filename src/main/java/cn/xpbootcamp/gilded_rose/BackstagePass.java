@@ -28,6 +28,7 @@ public class BackstagePass extends Product {
         this.setQuality(this.getQuality() + 3);
       } else {
         this.setQuality(0);
+        System.out.println("It is out of date");
       }
     }
   }
