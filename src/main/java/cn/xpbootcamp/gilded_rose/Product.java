@@ -4,13 +4,11 @@ public abstract class Product {
   private int Quality;
   private int SellIn;
   private String name;
-  private int ExpireDate;
 
-  public Product(int quality, int sellIn, String name, int expireDate) {
+  public Product(int quality, int sellIn, String name) {
     Quality = quality;
     SellIn = sellIn;
     this.name = name;
-    ExpireDate = expireDate;
   }
 
   public int getQuality() {
@@ -35,14 +33,6 @@ public abstract class Product {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public int getExpireDate() {
-    return ExpireDate;
-  }
-
-  public void setExpireDate(int expireDate) {
-    ExpireDate = expireDate;
   }
 
   public abstract void afterFewDays(int day);
