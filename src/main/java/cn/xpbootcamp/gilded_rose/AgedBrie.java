@@ -11,4 +11,5 @@ public class AgedBrie extends Product {
     this.setQuality(this.getQuality() + day);
     this.setSellIn(this.getSellIn() + day);
   }
+
 }

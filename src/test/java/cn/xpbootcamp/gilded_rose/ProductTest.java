@@ -2,6 +2,8 @@ package cn.xpbootcamp.gilded_rose;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import sun.java2d.Surface;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
@@ -26,9 +28,14 @@ public class ProductTest {
   @DisplayName("Check quality increase with the increase of day")
   void when_day_add_then_quality_add() {
     AgedBrie agedBrie = new AgedBrie(20, 0, "wine");
+    agedBrie.afterFewDays(5);
+    assertEquals(25, agedBrie.getQuality());
   }
 
-  
-
-
+  @Test
+  void when_day_add_quality_stay() {
+    Sulfuras sulfuras = new Sulfuras(20, 0, "sul");
+    sulfuras.afterFewDays(5);
+    assertEquals(20, sulfuras.getQuality());
+  }
 }
