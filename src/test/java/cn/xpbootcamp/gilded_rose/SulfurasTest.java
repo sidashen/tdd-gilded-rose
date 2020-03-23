@@ -10,7 +10,7 @@ public class SulfurasTest {
 
   @Test
   @DisplayName("Check quality of products")
-  void correct_price() {
+  void should_return_true_when_instantiated() {
     Sulfuras sulfuras = new Sulfuras(20, 0, "sul");
     sulfuras.afterFewDays(20);
     assumeTrue(sulfuras.getQuality() >= 0 && sulfuras.getQuality() <= 50);
