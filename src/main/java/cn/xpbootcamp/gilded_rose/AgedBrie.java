@@ -8,8 +8,12 @@ public class AgedBrie extends Product {
 
   @Override
   public void afterFewDays(int day) {
-    this.setQuality(this.getQuality() + day);
     this.setSellIn(this.getSellIn() + day);
+    for (int i = 1; i <= day; i++) {
+      if (this.getQuality() <= 50) {
+        this.setQuality(this.getQuality() + 1);
+      }
+    }
   }
 
 }
