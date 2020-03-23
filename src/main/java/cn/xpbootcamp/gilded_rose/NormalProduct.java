@@ -23,7 +23,7 @@ public class NormalProduct extends Product {
         this.setSellIn(this.getSellIn() + 1);
         this.setQuality(this.getQuality() - 2);
       } else {
-        System.out.println("it is out of date");
+        System.out.println("It is out of date");
         break;
       }
     }
